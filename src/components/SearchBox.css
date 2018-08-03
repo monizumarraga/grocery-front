@@ -1,0 +1,11 @@
+.Search{
+	background-color: #e4e4e4;
+	padding: 10px;
+	text-align: center;
+}
+
+.SearchBox{
+  font-size: 1.25em;
+  padding: 10px;
+  color: #777777;
+}
