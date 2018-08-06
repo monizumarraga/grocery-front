@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CardList.css';
 import Card from './Card';
 
@@ -12,9 +12,10 @@ const CardList = ({ products }) => {
         <Card 
           key={i}
           id={product.id}
-          product={product.product}
-          description={product.description}
-          code={product.code}
+          brand_name={product.brand_name}
+          name={product.name}
+          gtin14={product.gtin14}
+          images={product.images}
           />
         )
       })

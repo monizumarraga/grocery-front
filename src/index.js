@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import {Provider} from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
+import {createLogger} from 'redux-logger';
+
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
+import {searchProducts, requestProducts } from './reducers';
 
+import './index.css';
+
+const logger= createLogger();
+const rootReducers= combineReducers({ searchProducts, requestProducts })
+const store = createStore( rootReducers, applyMiddleware(thunkMiddleware, logger))
 
 ReactDOM.render(
-	<App />
+	<Provider store={store}>
+		<App/>
+	</Provider>
 	, document.getElementById('root'));
-//ReactDOM.render(<Card />, document.getElementById('root'));
 registerServiceWorker();

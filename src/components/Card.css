@@ -1,7 +1,7 @@
 .backSquare {
   text-align: center;
   background-color: lightgrey;
-  background: linear-gradient(right, lightgrey 20%, #e4e4e4 80%);
+  background: linear-gradient(to left, lightgrey 20%, #e4e4e4 80%);
   border:solid 1.5px lightgrey;
   border-radius: 15px;
   box-shadow: 5px 2px #999999;

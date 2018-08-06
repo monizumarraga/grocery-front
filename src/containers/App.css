@@ -11,7 +11,7 @@
 
 .App-title {
   font-size: 2em;
-  background: linear-gradient(right, #999999 0%, #e4e4e4 100%);
+  background: linear-gradient(to left, #999999 0%, #e4e4e4 100%);
   padding:10px;
   text-align: center;
   color:#555555;
