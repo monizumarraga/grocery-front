@@ -2,7 +2,9 @@ import {
 	CHANGE_SEARCH_FIELD,
 	REQUEST_PRODUCTS_PENDING,
 	REQUEST_PRODUCTS_SUCCESS,
-	REQUEST_PRODUCTS_FAILED
+	REQUEST_PRODUCTS_FAILED,
+	REQUEST_USER_PENDING,
+	CHANGE_USER
 	} from './constants'
 
 export const setSearchField = (text) => ({
@@ -14,7 +16,7 @@ export const requestProducts =() =>(dispatch) => {
 	dispatch({ 
 		type: REQUEST_PRODUCTS_PENDING 
 		});
-	fetch ('http://localhost:3000/')
+	fetch ('http://localhost:3000/items/')
 		.then(response => response.json())
 		.then(data => {
 			dispatch({ 
@@ -27,3 +29,8 @@ export const requestProducts =() =>(dispatch) => {
 						payload: error
 					}))
 }
+
+export const setUser = (text) => ({
+	type: CHANGE_USER,
+	payload: text
+})

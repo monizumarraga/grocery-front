@@ -8,7 +8,7 @@ const Card = ({ id, name, brand_name, gtin14, images }) => {
       <div>
         <img style= {{margin:'10px', padding: '10px', backgroundColor:'white', height:'70px', width:'auto'}}
               alt='noImage' 
-              src={images}/>
+              src=''/>
         <div>
           <h2 className="CardDescription">{brand_name}</h2>
           <p className="CardCode">{gtin14}</p>

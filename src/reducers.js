@@ -2,7 +2,8 @@ import {
 	CHANGE_SEARCH_FIELD,
 	REQUEST_PRODUCTS_PENDING,
 	REQUEST_PRODUCTS_SUCCESS,
-	REQUEST_PRODUCTS_FAILED
+	REQUEST_PRODUCTS_FAILED,
+	CHANGE_USER,
 	} from './constants'
 
 const initialStateSearch ={
@@ -35,4 +36,26 @@ export const requestProducts = (state= initialStateSearchProducts, action={}) =>
 		default:
 			return state;
 	}
+}
+
+
+const initialStateUser ={
+	isPending: true,
+	user: {
+			id: '',
+			name: '',
+			password: '',
+			email: '',
+			address: '',
+			joined: ''
+			}
+}
+
+export const loadUser = (state= initialStateUser, action={}) => {
+	switch (action.type) {
+		case CHANGE_USER:
+			return Object.assign({}, state, {searchField: action.payload})
+		default:
+			return state
+		}
 }
